@@ -38,17 +38,14 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-4">
           <SignedIn>
-            <Link
-              href="/dashboard"
-              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
-            >
-              <button className="flex items-center justify-center gap-3 bg-white border hover:bg-gray-100 border-gray-200 text-black w-32 h-9 rounded-sm cursor-pointer">
+            <Link to="/dashboard" className="">
+              <button className="flex items-center justify-center gap-3 bg-white border hover:bg-gray-100 px-4 py-2 border-gray-200 text-black h-9 rounded-md cursor-pointer">
                 <MdOutlineDashboard size={18} />
                 <span className="hidden md:inline text-sm">Dashboard</span>
               </button>
             </Link>
             <a href="/transaction/create">
-              <button className="flex items-center justify-center gap-3 bg-black text-white hover:bg-gray-800 px-4 py-2 rounded-md cursor-pointer transition duration-200 ">
+              <button className="flex items-center justify-center gap-3 bg-black hover:bg-gray-800 px-4 py-2 text-gray-100 rounded-md cursor-pointer transition duration-200 ">
                 <GrTransaction size={18} />
                 <span className="hidden md:inline text-sm">
                   Add Transaction
