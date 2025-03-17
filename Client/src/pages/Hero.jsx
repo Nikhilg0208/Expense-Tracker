@@ -40,12 +40,12 @@ const Hero = () => {
           analyze, and optimize your spending with real-time insights.
         </p>
         <div className="flex justify-center space-x-4">
-          <Link href="/dashboard">
+          <Link to="/dashboard">
             <button className="bg-black text-white hover:bg-gray-800 w-36 h-10 rounded-sm cursor-pointer">
               Get Started
             </button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
+          <Link to="https://www.youtube.com/watch?v=bsvmj3521Vs&list=RDMMbsvmj3521Vs&start_radio=1">
             <button className="bg-white border hover:bg-gray-100 border-gray-300 text-black w-36 h-10 rounded-sm cursor-pointer">
               Watch Demo
             </button>

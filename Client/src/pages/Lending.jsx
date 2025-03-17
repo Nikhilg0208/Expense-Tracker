@@ -110,7 +110,7 @@ const Lending = () => {
             Join thousands of users who are already managing their finances
             smarter with Welth
           </p>
-          <Link href="/dashboard">
+          <Link to="/dashboard">
             <button
               size="lg"
               className="bg-white w-40 h-10 rounded-md text-blue-600 hover:bg-blue-50 animate-bounce"

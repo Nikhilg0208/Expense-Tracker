@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/">
+        <Link to="/">
           <img
             src={logo}
             alt="Welth Logo"
