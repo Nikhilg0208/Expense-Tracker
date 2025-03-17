@@ -59,8 +59,6 @@ const Hero = () => {
           >
             <img
               src={banner}
-              width={1280}
-              height={720}
               alt="Dashboard Preview"
               className="rounded-lg max-w-full h-auto"
             />
