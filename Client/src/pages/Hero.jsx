@@ -55,7 +55,7 @@ const Hero = () => {
           <motion.div
             animate={controls}
             initial={{ rotateX: 15, translateZ: -30 }}
-            className="rounded-lg shadow-2xl border mx-auto"
+            className="rounded-lg shadow-2xl w-full max-w-[1280px] border mx-auto"
           >
             <img
               src={banner}
