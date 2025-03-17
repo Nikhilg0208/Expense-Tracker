@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Loader from "./components/common/Loader";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import { SignedIn } from "@clerk/clerk-react";
 
 const Transaction = lazy(() => import("./pages/Transaction"));

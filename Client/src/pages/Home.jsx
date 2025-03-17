@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
-import Hero from "../pages/Hero";
-import Lending from "../pages/Lending";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Lending from "../components/Lending";
 const Home = () => {
   return (
     <>
