@@ -45,7 +45,7 @@ const CreateAccountDrawer = () => {
             {...register("type", { required: "Account type is required" })}
             className="border border-gray-300 p-2 w-full rounded-md focus:ring-2 focus:ring-gray-400 outline-none cursor-pointer"
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Select type
             </option>
             <option value="CURRENT">Current</option>

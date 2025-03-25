@@ -7,6 +7,7 @@ import { SignedIn } from "@clerk/clerk-react";
 
 const Transaction = lazy(() => import("./pages/Transaction"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
+
 function App() {
   return (
     <Router>
