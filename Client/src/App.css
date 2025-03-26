@@ -5,10 +5,8 @@
   transform: rotateX(15deg) scale(1);
   transition: transform 0.5s ease-out;
   will-change: transform;
-  overflow: hidden;
 }
 
 .hero-image.scrolled {
   transform: rotateX(0deg) scale(1) translateY(40px);
-  overflow:hidden;
 }
