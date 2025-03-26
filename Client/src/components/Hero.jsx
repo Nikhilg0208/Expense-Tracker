@@ -1,34 +1,28 @@
-import React from "react";
-import banner from "../assets/banner.jpeg";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import banner from "../assets/banner.jpeg";
 import { Button } from "./ui/button";
 
 const Hero = () => {
-  const controls = useAnimation();
+  const imageRef = useRef(null);
 
   useEffect(() => {
+    const imageElement = imageRef.current;
+
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 150) {
-        controls.start({
-          rotateX: 0,
-          translateZ: 0,
-          transition: { duration: 0.2, ease: "easeOut" }, // Smoother transition
-        });
+      const scrollPosition = window.scrollY;
+      const scrollThreshold = 100;
+
+      if (scrollPosition > scrollThreshold) {
+        imageElement.classList.add("scrolled");
       } else {
-        controls.start({
-          rotateX: 15,
-          translateZ: -30, // Slight inward effect
-          transition: { duration: 0.2, ease: "easeOut" }, // Smooth effect
-        });
+        imageElement.classList.remove("scrolled");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls]);
+  }, []);
 
   return (
     <section className="pt-40 pb-20 px-4 min-w-full">
@@ -50,18 +44,17 @@ const Hero = () => {
             </Button>
           </Link>
         </div>
-        <div className="perspective-[1200px] mt-10 overflow-hidden">
-          <motion.div
-            animate={controls}
-            initial={{ rotateX: 15, translateZ: -30 }}
-            className="rounded-lg shadow-2xl w-full max-w-[1280px] border mx-auto"
-          >
+        <div className="perspective-[1000px] mt-5 md:mt-0">
+          <div ref={imageRef} className="hero-image">
             <img
               src={banner}
+              width={1280}
+              height={720}
               alt="Dashboard Preview"
-              className="rounded-lg max-w-full h-auto"
+              className="rounded-lg shadow-2xl border mx-auto"
+              priority
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

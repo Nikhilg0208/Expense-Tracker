@@ -45,7 +45,7 @@ const Header = () => {
               </Button>
             </Link>
             <a href="/transaction/create">
-              <Button className="flex items-center gap-2 bg-black text-white hover:bg-gray-800">
+              <Button className="flex items-center gap-2 bg-black text-white hover:bg-gray-800 cursor-pointer">
                 <GrTransaction size={18} />
                 <span className="hidden md:inline">Add Transaction</span>
               </Button>
