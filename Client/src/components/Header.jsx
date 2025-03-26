@@ -1,23 +1,24 @@
-import React from "react";
-import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
 import {
   SignedIn,
   SignedOut,
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
-import { MdOutlineDashboard } from "react-icons/md";
+import React from "react";
 import { GrTransaction } from "react-icons/gr";
+import { MdOutlineDashboard } from "react-icons/md";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/">
           <img
             src={logo}
-            alt="Welth Logo"
+            alt="SpendWise Logo"
             width={200}
             height={60}
             className="h-12 w-auto object-contain"
@@ -54,11 +55,12 @@ const Header = () => {
             </a>
           </SignedIn>
           <SignedOut>
-            <SignInButton forceRedirectUrl="/dashboard">
-              <button className="text-black h-9 w-18 rounded-md hover:bg-gray-100  border border-gray-300 shadow-md cursor-pointer">
-                Login
-              </button>
-            </SignInButton>
+            <button
+              className="text-black h-9 w-18 rounded-md hover:bg-gray-100 border border-gray-300 shadow-md cursor-pointer"
+              onClick={() => navigate("/signin")}
+            >
+              Login
+            </button>
           </SignedOut>
           <SignedIn>
             <UserButton
