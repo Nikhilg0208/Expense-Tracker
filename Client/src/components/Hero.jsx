@@ -3,6 +3,7 @@ import banner from "../assets/banner.jpeg";
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   const controls = useAnimation();
@@ -41,14 +42,12 @@ const Hero = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <Link to="/dashboard">
-            <button className="bg-black text-white hover:bg-gray-800 w-36 h-10 rounded-sm cursor-pointer">
+            <Button
+              size="lg"
+              className="px-8 bg-black text-white hover:bg-gray-800"
+            >
               Get Started
-            </button>
-          </Link>
-          <Link to="https://www.youtube.com/watch?v=bsvmj3521Vs&list=RDMMbsvmj3521Vs&start_radio=1">
-            <button className="bg-white border hover:bg-gray-100 border-gray-300 text-black w-36 h-10 rounded-sm cursor-pointer">
-              Watch Demo
-            </button>
+            </Button>
           </Link>
         </div>
         <div className="perspective-[1200px] mt-10 overflow-hidden">

@@ -1,14 +1,10 @@
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import React from "react";
 import { GrTransaction } from "react-icons/gr";
 import { MdOutlineDashboard } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -40,27 +36,29 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <SignedIn>
             <Link to="/dashboard" className="">
-              <button className="flex items-center justify-center gap-3 bg-white border hover:bg-gray-100 px-4 py-2 border-gray-200 text-black h-9 rounded-md cursor-pointer">
+              <Button
+                variant="outline"
+                className="border border-gray-200 hover:bg-gray-100 cursor-pointer"
+              >
                 <MdOutlineDashboard size={18} />
                 <span className="hidden md:inline text-sm">Dashboard</span>
-              </button>
+              </Button>
             </Link>
             <a href="/transaction/create">
-              <button className="flex items-center justify-center gap-3 bg-black hover:bg-gray-800 px-4 py-2 text-gray-100 rounded-md cursor-pointer transition duration-200 ">
+              <Button className="flex items-center gap-2 bg-black text-white hover:bg-gray-800">
                 <GrTransaction size={18} />
-                <span className="hidden md:inline text-sm">
-                  Add Transaction
-                </span>
-              </button>
+                <span className="hidden md:inline">Add Transaction</span>
+              </Button>
             </a>
           </SignedIn>
           <SignedOut>
-            <button
-              className="text-black h-9 w-18 rounded-md hover:bg-gray-100 border border-gray-300 shadow-md cursor-pointer"
+            <Button
+              variant={"outlinn"}
               onClick={() => navigate("/signin")}
+              className="border border-gray-200 shadow-sm hover:bg-gray-100 cursor-pointer"
             >
               Login
-            </button>
+            </Button>
           </SignedOut>
           <SignedIn>
             <UserButton
