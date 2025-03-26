@@ -6,13 +6,15 @@ const SignedIn = () => {
   return (
     <>
       <Header />
-      <div className="flex items-center justify-center min-h-screen mt-10 bg-gray-100">
-        <SignIn
-          path="/signin"
-          routing="path"
-          signUpUrl="/signup"
-          forceRedirectUrl="/dashboard"
-        />
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="mt-24">
+          <SignIn
+            path="/signin"
+            routing="path"
+            signUpUrl="/signup"
+            forceRedirectUrl="/dashboard"
+          />
+        </div>
       </div>
       <Footer />
     </>
