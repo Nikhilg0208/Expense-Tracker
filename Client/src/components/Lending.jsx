@@ -5,7 +5,9 @@ import {
   howItWorksData,
   testimonialsData,
 } from "../data/Lending";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 const Lending = () => {
   return (
     <>
@@ -29,18 +31,18 @@ const Lending = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Everything you need to manage your finances
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuresData.map((feature, index) => (
-              <div
-                className="p-6 h-64 w-full border border-gray-200 shadow-md rounded-md flex items-center justify-center"
+              <Card
+                className="p-6 border border-gray-200 shadow-sm"
                 key={index}
               >
-                <div className="space-y-4 w-3/4">
+                <CardContent className="space-y-4 pt-4 pb-4 w-6/7">
                   {feature.icon}
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -70,13 +72,13 @@ const Lending = () => {
           <h2 className="text-3xl font-bold text-center mb-16">
             What Our Users Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonialsData.map((testimonial, index) => (
-              <div
+              <Card
                 key={index}
-                className="p-6 border h-64 md:h-90 w-full border-gray-200 shadow-md rounded-md flex items-center justify-center"
+                className="p-6  border border-gray-200 shadow-sm"
               >
-                <div className="space-y-4 w-4/5">
+                <CardContent className="pt-4">
                   <div className="flex items-center mb-4">
                     <img
                       src={testimonial.image}
@@ -93,8 +95,8 @@ const Lending = () => {
                     </div>
                   </div>
                   <p className="text-gray-600">{testimonial.quote}</p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -108,15 +110,15 @@ const Lending = () => {
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of users who are already managing their finances
-            smarter with SpendWise
+            smarter with Welth
           </p>
           <Link to="/dashboard">
-            <button
+            <Button
               size="lg"
-              className="bg-white w-40 h-10 rounded-md text-blue-600 hover:bg-blue-50 animate-bounce"
+              className="bg-white text-blue-600 hover:bg-blue-50 animate-bounce"
             >
               Start Free Trial
-            </button>
+            </Button>
           </Link>
         </div>
       </section>
