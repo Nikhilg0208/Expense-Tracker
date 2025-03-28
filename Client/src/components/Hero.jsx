@@ -38,7 +38,7 @@ const Hero = () => {
           <Link to="/dashboard">
             <Button
               size="lg"
-              className="px-8 bg-black text-white hover:bg-gray-800"
+              className="px-8"
             >
               Get Started
             </Button>

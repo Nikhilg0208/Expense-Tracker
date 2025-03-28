@@ -36,27 +36,20 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <SignedIn>
             <Link to="/dashboard" className="">
-              <Button
-                variant="outline"
-                className="border border-gray-200 hover:bg-gray-100 cursor-pointer"
-              >
+              <Button variant="outline">
                 <MdOutlineDashboard size={18} />
                 <span className="hidden md:inline text-sm">Dashboard</span>
               </Button>
             </Link>
             <a href="/transaction/create">
-              <Button className="flex items-center gap-2 bg-black text-white hover:bg-gray-800 cursor-pointer">
+              <Button>
                 <GrTransaction size={18} />
                 <span className="hidden md:inline">Add Transaction</span>
               </Button>
             </a>
           </SignedIn>
           <SignedOut>
-            <Button
-              variant={"outlinn"}
-              onClick={() => navigate("/signin")}
-              className="border border-gray-200 shadow-sm hover:bg-gray-100 cursor-pointer"
-            >
+            <Button variant={"outline"} onClick={() => navigate("/signin")}>
               Login
             </Button>
           </SignedOut>
