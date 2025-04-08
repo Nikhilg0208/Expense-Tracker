@@ -6,7 +6,7 @@ import { errorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
 
 // Importing Routes
-import userRoute from "./routes/user.js";
+import dashboardRoute from "./routes/dashboard.js";
 
 config({
   path: "./.env",
@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 // Using Routes
-app.use("/api/v1/user", userRoute);
+app.use("/api/v1/dashboard", dashboardRoute);
 
 app.use(errorMiddleware);
 
