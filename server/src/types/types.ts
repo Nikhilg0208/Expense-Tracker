@@ -18,3 +18,10 @@ export type ResponseType = {
   message?: string;
   data?: any;
 };
+
+export interface SaveDetailsRequestBody {
+  clerkUserId: string;
+  email: string;
+  name: string;
+  imageUrl: string;
+}
